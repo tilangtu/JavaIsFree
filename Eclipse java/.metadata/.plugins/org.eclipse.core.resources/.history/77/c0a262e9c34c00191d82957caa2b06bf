@@ -1,0 +1,36 @@
+package DLSV;
+import java.util.*;
+public class Array_Random {
+	public static void main(String[] args) {
+		Array_Random rd = new Array_Random();
+		rd.random();
+	}
+
+	private void random() {
+		int[] a = new int[100];// Mang nhan 100 so random
+		boolean[] b = new boolean[100];// Mang dem so lan moi so xuat hien
+		int dem = 1;
+		Random rd = new Random();
+		for (int n = 0; n < 100; n++) {
+			int number = rd.nextInt(100);
+			a[number] = number;
+			b[number] = true;
+			
+			System.out.print(number);
+			if (n < 99)
+				System.out.print(" , ");
+		}
+		while (dem < 21) {
+			int no1 = rd.nextInt(100);
+			int no2 = rd.nextInt(100);
+			if ((a[no1] + a[no2]) % 10 == 0 && (a[no1] + a[no2]) <= 100 && b[no1] == true && b[no2] == true) {
+				System.out.printf("\n Cap so thoa yeu cau thu %2d la  %2d  va  %2d", dem, a[no1], a[no2]);
+				b[no1] = false;
+				b[no2] = false;
+				dem++;
+			}
+			
+		}
+	}
+
+}

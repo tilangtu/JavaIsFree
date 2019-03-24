@@ -1,0 +1,10 @@
+package TestCode;
+
+public class MangArray {
+	private static int a ;
+	
+	public static void main(String[] args) {
+		a =3;
+		System.out.println(a);
+	}
+}

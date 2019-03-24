@@ -1,0 +1,69 @@
+package DLSV;
+
+import java.util.Scanner;
+
+public class SinhVien {
+	public static void main(String[] args) {
+		DLSV run = new DLSV();
+		run.Name();
+		run.Toan();
+		System.out.println("hien ten "+run.getToan());
+	}
+}
+class DLSV{
+	 String name ;
+	private int toan, ly,hoa,sinh;
+	
+	public int getToan() {
+		return toan;
+	}
+	public void setToan(int toan) {
+		this.toan = toan;
+	}
+	public int getLy() {
+		return ly;
+	}
+	public void setLy(int ly) {
+		this.ly = ly;
+	}
+	public int getHoa() {
+		return hoa;
+	}
+	public void setHoa(int hoa) {
+		this.hoa = hoa;
+	}
+	public int getSinh() {
+		return sinh;
+	}
+	public void setSinh(int sinh) {
+		this.sinh = sinh;
+	}
+	
+	Scanner sc = new Scanner (System.in);
+	public String Name () {
+		System.out.println("Ten : ");
+		name =sc.nextLine();
+		return name;
+	}
+	public int Toan () {
+		System.out.println("diem Toan : ");
+		setToan(sc.nextInt());
+		return getToan();
+	}
+	public int Ly () {
+		System.out.println("diem Ly : ");
+		setLy(sc.nextInt());
+		return getLy();
+	}
+	public int Hoa () {
+		System.out.println("diem Hoa : ");
+		setLy(sc.nextInt());
+		return getHoa();
+	}
+	public int Sinh () {
+		System.out.println("diem Hoa : ");
+		setSinh(sc.nextInt());
+		return getSinh();
+	}
+	
+}

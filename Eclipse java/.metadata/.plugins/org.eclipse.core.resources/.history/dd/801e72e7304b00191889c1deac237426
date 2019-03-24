@@ -1,0 +1,10 @@
+package GiaPhuongTrinhBac2;
+
+public class GiaiPhuongTrinhBac2 {
+	public static void main(String[] args) {
+		XuLyDuLieu xl = new XuLyDuLieu();
+		khaiBao kb = new khaiBao();
+		xl.inputA();
+		System.out.println(kb.getA());
+	}
+}

@@ -1,0 +1,96 @@
+package TestCode;
+
+import java.util.*;
+
+public class MangArray {
+	public static void main(String[] args) {
+		input  sc  = new input();
+		maxMin mm  = new maxMin();
+		sapXep sx  = new sapXep();
+		sc.input();
+		System.out.println("So lon nhat ");
+		mm.max(sc.a, sc.b,sc.c);
+
+	}
+}
+
+class input {
+	Scanner sc = new Scanner(System.in);
+	int a, b, c;
+
+	public void input() {
+		System.out.println("input  a : ");
+		a = sc.nextInt();
+		System.out.println("input  b : ");
+		b = sc.nextInt();
+		System.out.println("input  c : ");
+		c = sc.nextInt();
+	}
+
+//	public int getA() {
+//		return a;
+//	}
+//
+//	public int getB() {
+//		return b;
+//	}
+//
+//	public int getC() {
+//		return c;
+//	}
+}
+
+class maxMin {
+	public void max(int a, int b, int c) {
+
+		int max = Math.max(Math.max(a, b), c);
+		System.out.println("Max : " + max);
+	}
+
+	public void min(int a, int b, int c) {
+		int min = Math.min(Math.min(a, b), c);
+		System.out.println("Min : " + min);
+	}
+}
+
+class sapXep {
+	public void tangDan(int a, int b, int c) {
+		int t = 0;
+		if (a > b) {
+			t = a;
+			a = b;
+			b = t;
+		}
+		if (a > c) {
+			t = a;
+			a = c;
+			c = t;
+		}
+		if (c > b) {
+			t = c;
+			c = b;
+			b = t;
+		}
+		System.out.printf("ket qua tang dan : %2d %2d %2d", a, b, c);
+	}
+
+	public void giamDan(int a, int b, int c) {
+		int t = 0;
+		if (a < b) {
+			t = a;
+			a = b;
+			b = t;
+		}
+		if (a < c) {
+			t = a;
+			a = c;
+			c = t;
+		}
+		if (c < b) {
+			t = c;
+			c = b;
+			b = t;
+		}
+		System.out.printf("ket qua tang dan : %2d %2d %2d", a, b, c);
+	}
+}

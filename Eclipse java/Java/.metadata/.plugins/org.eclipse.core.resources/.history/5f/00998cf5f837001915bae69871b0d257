@@ -1,0 +1,67 @@
+package TestCode;
+
+import java.util.*;
+
+public class CodeTest {
+	public static void main(String[] args) {
+		PTB2 show = new PTB2();
+		show.All();
+	}
+
+}
+
+class PTB2 {
+	Scanner ip = new Scanner(System.in);
+	int a, b, c;
+
+	public void Input() {
+
+		System.out.print("Nhap so nguyen a: ");
+		a = ip.nextInt();
+		System.out.print("Nhap so nguyen b: ");
+		b = ip.nextInt();
+		System.out.print("Nhap so nguyen c: ");
+		c = ip.nextInt();
+
+	}
+
+	public void PTB1(int b, int c) {
+		double x;
+		if (b == 0)
+			if (c == 0)
+				System.out.println("PTVSN");
+			else
+				System.out.println("PTVN");
+		else {
+			x = (float) -c / b;
+			System.out.println("Phuong trinh co nghiem: " + x);
+		}
+	}
+
+	public void PTB2(int a, int b, int c) {
+		double Delta, x, x1, x2;
+		if (a == 0)
+			PTB1(b, c);
+		else {
+			Delta = Math.pow(b, 2) - 4 * a * c;
+			if (Delta < 0)
+				System.out.println("PTVN");
+			if (Delta == 0) {
+				x = -b / (2 * a);
+				System.out.println("Phuong trinh co nghiem kep: " + x);
+			}
+			if (Delta > 0) {
+				x1 = (-b - Math.sqrt(Delta)) / (2 * a);
+				x2 = (-b + Math.sqrt(Delta)) / (2 * a);
+				System.out.println("Phuong trinh co 2 nghiem: " + Math.max(x1, x2) + " va " + Math.min(x1, x2));
+
+			}
+
+		}
+	}
+
+	public void All() {
+		Input();
+		PTB2(a, b, c);
+	}
+}

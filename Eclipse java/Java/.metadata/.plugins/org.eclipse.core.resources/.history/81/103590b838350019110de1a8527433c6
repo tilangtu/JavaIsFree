@@ -1,0 +1,16 @@
+package TestCode;
+
+import java.util.*;
+
+public class MangArray {
+	
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
+		System.out.println("nhap a ");
+		int a = Integer.parseInt( sc.nextLine() );
+		int b = Integer.parseInt("4");
+		int c =a +b;
+		System.out.println(c);
+	}
+}

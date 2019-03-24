@@ -1,0 +1,50 @@
+package GiaPhuongTrinhBac2;
+
+import java.util.Scanner;
+
+class KhaiBao {
+	Scanner input = new Scanner(System.in);
+	private int a, b, c;
+
+	public int getB() {
+		return b;
+	}
+
+	public void setB(int b) {
+		this.b = b;
+	}
+
+	public int getC() {
+		return c;
+	}
+
+	public void setC(int c) {
+		this.c = c;
+	}
+
+	public int getA() {
+		return a;
+	}
+
+	public void setA(int a) {
+		this.a = a;
+	}
+
+	int inputA() {
+		System.out.print("nhap a : ");
+		setA(input.nextInt());
+		return getA();
+	}
+
+	int inputB() {
+		System.out.print("nhap b : ");
+		setB(input.nextInt());
+		return getB();
+	}
+
+	int inputC() {
+		System.out.print("nhap c : ");
+		setB(input.nextInt());
+		return getC();
+	}
+}

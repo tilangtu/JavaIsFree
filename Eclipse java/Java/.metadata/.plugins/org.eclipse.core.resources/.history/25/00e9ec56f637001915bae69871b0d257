@@ -1,0 +1,25 @@
+package TestCode;
+
+import java.util.*;
+
+public class MangArray {
+	
+	
+	public static void main(String[] args) {
+		MayTinh mt= new MayTinh();
+		Scanner input = new Scanner (System.in);
+		System.out.println("nhap a vào :");
+		 mt.setA(input.nextInt()+5);
+		System.out.println("xuat a ra : ");
+		System.out.println(mt.getA()+5);
+	}
+}
+class MayTinh{
+	private int a ;
+	public void setA(int setA) {
+		this.a = setA;
+	}
+	public int getA () {
+		return a;
+	}
+}

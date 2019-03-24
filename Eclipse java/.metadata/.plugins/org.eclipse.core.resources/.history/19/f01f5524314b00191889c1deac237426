@@ -1,0 +1,19 @@
+package GiaPhuongTrinhBac2;
+
+import java.util.Scanner;
+
+class XuLyDuLieu {
+	KhaiBao hienthi = new KhaiBao();
+	void nhapDL() {
+		hienthi.inputA();
+		hienthi.inputB();
+		hienthi.inputC();
+	}
+	void xuPT() {
+		if(hienthi.getA()==0) {
+			System.out.println("in thu");
+		}else {
+			System.out.println("a khac 0");
+		}
+	}
+}

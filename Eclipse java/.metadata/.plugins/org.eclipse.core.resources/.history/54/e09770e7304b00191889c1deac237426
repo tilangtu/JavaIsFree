@@ -1,0 +1,13 @@
+package GiaPhuongTrinhBac2;
+
+import java.util.Scanner;
+
+class XuLyDuLieu {
+	khaiBao kb = new khaiBao();
+	Scanner input = new Scanner(System.in);
+	int inputA() {
+		System.out.print("nhap a : ");
+		kb.setA(input.nextInt());
+		return kb.getA();
+	}
+}
